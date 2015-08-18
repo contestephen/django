@@ -1,14 +1,13 @@
-dir = 'home/contes6/Documents/django/csvparse/mycsv.csv'
-djangoDir = '/home/contes6/Documents/django/mysite'
+dir = '/home/contes6/Documents/django/csvparse/mycsv.csv'
 
+ 
 import sys,os
-sys.path.append(djangoDir)
+sys.path.append('/home/contes6/Documents/django/mysite')
 os.environ['DJANGO_SETTINGS_MODULE'] ='settings'
-  
-dir = 'home/contes6/Documents/django/csvparse'
-djangoDir = '/home/contes6/Documents/django'
 
-import models.py
+import settings
+
+from models import getData
 import csv
 
 reader = csv.reader(open(dir), delimiter=',', quotechar='"')

@@ -11,4 +11,4 @@ class getData(models.Model):
 	timestamp = models.DateTimeField(default=datetime.datetime.now)
 
 	def __str__(self):
-		return '%s' %(self.name)	
+		return '%s, %s, %s %s, %s' %(self.name, self.street_address, self.city, self.state, self.zipcode)
