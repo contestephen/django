@@ -17,15 +17,10 @@ class Command(BaseCommand):
 	for rownum, row in enumerate(reader):
 		if rownum == 0:
 			continue
-		
+
 		print "Processing row %s" % rownum
 
-		#check to see if row already exists
-		if row[0] in str(getData.objects.all()):
-			print " Account Number: %s already exists... breaking" %row[0]
-			break
-		
-		if row[0] != 'Account' :
+		if row[0] != 'Account':
 			# create an intance of getData object
 			mydict = {
 				'account_num': row[0],
